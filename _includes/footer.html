@@ -13,6 +13,15 @@
           </li>
           {% endif %}
 
+            {% if site.social.gitee %}
+            <!-- Gitee -->
+            <li class="navigation__item_social">
+              <a href="https://gitee.com/{{site.social.gitee}}" title="@{{site.social.gitee}} 的 Gitee" target="_blank">
+                <div class="footer-social-icon">Gitee</div>
+              </a>
+            </li>
+            {% endif %}
+
           {% if site.social.zhihu %}
           <!-- Zhihu -->
           <li class="navigation__item_social">

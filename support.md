@@ -40,16 +40,16 @@ title: 技术支持
 
 <h3> 感谢您的打赏 </h3> 
 
-![](/images/payimg/alipayimg-1.jpg)
+![](/images/payimg/alipayimgx.jpg)
 
-![](/images/payimg/weipayimg.jpg)
+![](/images/payimg/weipayimgx.jpg)
 
 <h3> 如何联系到我 </h3>
 
 <p> 
-email：leoparpan@icloud.com       
+email：xy_9900@126.com       
 <p> 
-qq: 1499065178     
+qq: 328540747     
 <p> 
 
 {% include comments.html %}
