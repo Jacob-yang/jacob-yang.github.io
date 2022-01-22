@@ -10,8 +10,8 @@ title: 收藏站
 |      |                                                              |      |
 | ---- | ------------------------------------------------------------ | ---- |
 |      | <a href="https://jacob-yang.gitee.io/xhtml/1/" target="_blank">全视频背景</a> |      |
-|      |                                                              |      |
-|      |                                                              |      |
+|      | <a href="https://jacob-yang.gitee.io/xhtml/1/" target="_blank">二次元导航</a> |      |
+|      | <a href="https://jacob-yang.gitee.io/xhtml/4/" target="_blank">web导航</a> |      |
 
 
 
