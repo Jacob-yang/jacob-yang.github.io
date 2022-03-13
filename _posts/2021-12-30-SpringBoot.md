@@ -217,3 +217,66 @@ Spring Validation验证框架对参数的验证机制提供了@Validated（Sprin
 
 
 原文地址：https://blog.csdn.net/dyy0213/article/details/107459668
+
+
+
+# SpringBoot打war包
+
+https://how2j.cn/k/springboot/springboot-war/1655.html
+
+## 1.实现 SpringBootServletInitializer 接口
+
+新建 `SpringBootServletInitializer` 的实现类 `ServletInitializer` 如下
+
+```
+public class ServletInitializer extends SpringBootServletInitializer {
+
+    @Override
+    protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+        return builder.sources(AntifraudApplication.class);
+    }
+}
+```
+
+其中 AntifraudApplication是 **Spring Boot** 的入口类，跟原来没什么两样：
+
+
+
+## 2.pom.xml修改为如下代码，主要两个改动
+
+### 2.1 打包方式修改为 `war` 
+
+```xml
+<packaging>war</packaging>
+```
+
+### 2.2 排除 spring-boot-starter-web 内嵌的 Web 容器
+
+```
+<exclusion>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-tomcat</artifactId>
+</exclusion>
+```
+
+此方式我们把 **Servlet Api** 依赖也排除掉了, `SpringBootServletInitializer` 需要依赖 **Servlet Api** ，因此我们要加上它（**务必注意 versionNumber 版本要跟你外置的 Tomcat 版本兼容**）。
+
+```xml
+<dependency>
+            <groupId>org.apache.tomcat</groupId>
+            <artifactId>tomcat-servlet-api</artifactId>
+            <version>8.0.36</version>
+            <scope>provided</scope>
+        </dependency>
+```
+
+2.2-1在**`pom.xml`**中**添加一个dependency依赖**（意思是tomcat是外部提供的）
+
+<dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-tomcat</artifactId>
+   <scope>provided</scope>
+</dependency>
+
+
+
